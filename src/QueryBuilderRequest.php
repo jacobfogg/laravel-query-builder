@@ -43,7 +43,7 @@ class QueryBuilderRequest extends Request
     {
         $filterParameter = config('query-builder.parameters.filter');
 
-        $filterParts = $this->query($filterParameter, []);
+        $filterParts = $this->input($filterParameter, []);
 
         if (is_string($filterParts)) {
             return collect();
